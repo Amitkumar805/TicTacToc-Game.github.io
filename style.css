@@ -1,0 +1,111 @@
+*{
+    margin: 0;               
+    padding: 0;              
+    box-sizing: border-box;   
+    font-family: 'Poppins' , 'sans-serif'; 
+}
+
+body{
+    background-image: url(images/sunrise.jpg);
+    background-size: cover;
+    
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/Background.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+
+.game-info{
+    color:red;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: greenyellow;
+    border-radius: 1rem;
+    padding: 0.4rem 3rem;
+    text-align: center;
+}
+
+.game-info , .tic-tac-toe, .btn{
+    opacity: .9;
+}
+
+.tic-tac-toe {
+    width: 90%;
+    max-width: 20rem;
+    background-color: greenyellow;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255,0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+    position: relative;
+    top: 30px;
+    box-shadow: 3px 3px 3px  pink ;
+
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size:3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5 {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white; 
+}
+
+.box3, .box6 {
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8 {
+    border-right: 2px solid white;
+}
+
+.btn{
+    color: red;
+    position: absolute;
+    bottom: 1rem;  
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: greenyellow;
+    border: 1px solid rgba(255, 255, 255,0.25);
+    padding:0.5rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn.active {
+    display: flex;
+}
+
+.win {
+    background-color: red;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        background-image: url(images/Backgroundmobile.png);
+    }
+
+}
